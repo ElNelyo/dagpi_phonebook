@@ -32,7 +32,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<?php 
+								<?php
 	                            foreach ($lesTelephones as $t) {
 	                                echo "<tr>";
 	                                    echo "<td>".$t->getIndicatifT()."</td>";
@@ -62,41 +62,41 @@
 						<div class="fh5co-spacer fh5co-spacer-sm"></div>
 					</div>
 					<div class="col-md-8 col-md-offset-2 animate-box">
-						<form method="post">
+						<form method="post" action="#">
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="sr-only" for="name">Nom</label> <input class="form-control input-lg" name="nom" placeholder="Nom" type="text">
+									<label class="sr-only" for="name">Nom</label> <?php echo '<input class="form-control input-lg" name="nom" placeholder="'.$leContact->getNomC().'" type="text">';?>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<label class="sr-only" for="email">Prenom</label> <input class="form-control input-lg" name="prenom" placeholder="Prénom" type="text">
+									<label class="sr-only" for="email">Prenom</label> <?php echo '<input class="form-control input-lg" name="prenom" placeholder="'.$leContact->getPrenomC().'" type="text">';?>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<label class="sr-only" for="societe">Societe</label> <input class="form-control input-lg" name="societe" placeholder="Société" type="text">
+									<label class="sr-only" for="societe">Societe</label><?php echo '<input class="form-control input-lg" name="societe" placeholder="'.$leContact->getSocieteC().'" type="text">';?>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<label class="sr-only" for="adresse">Adresse</label> <input class="form-control input-lg" name="adresse" placeholder="Adresse" type="text">
+									<label class="sr-only" for="adresse">Adresse</label><?php echo '<input class="form-control input-lg" name="adresse" placeholder="'.$leContact->getAdresseC().'" type="text">'?>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<label class="sr-only" for="date">Date de naissance</label> <input class="form-control input-lg" name="date" placeholder="Date de naissance" type="text">
+									<label class="sr-only" for="date">Date de naissance</label> <?php echo'<input class="form-control input-lg" name="date" placeholder="'.$leContact->getDatenaissanceC().'" type="text">';?>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<label class="sr-only" for="message">Commentaire</label> 
+									<label class="sr-only" for="message">Commentaire</label>
 									<textarea class="form-control input-lg" name="message" placeholder="Commentaire" rows="3"><?php echo $leContact->getCommentaireC(); ?></textarea>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input class="btn btn-primary btn-lg" type="submit" value="Modifier">
+									<input class="btn btn-primary btn-lg" name="updater" type="submit" value="Modifier">
 								</div>
 							</div>
 						</form>
