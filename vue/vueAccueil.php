@@ -26,12 +26,20 @@
 						</tr>
 					</thead>
 					<tbody>
+
+
+
+
+
 						<?php
+
                         foreach ($lesContacts as $c) {
                             echo "<tr>";
                             echo "<td><a href='index.php?page=contact&id=".$c->getIdC()."'>".$c->getNomC()."</a></td>";
                             echo "<td>".$c->getPrenomC()."</td>";
-                            echo "<td><a id='supprimer' href='index.php?page=accueil&id=".$c->getIdC()."'/><button type='submit' name='supprimer' class='btn btn-danger'>Supprimer</button></a></td>";
+                            echo "<td><a id='supprimer' href='index.php?page=accueil&id=".$c->getIdC()."'/><button type='submit' name='supprimer' class='btn btn-danger'
+														 onclick=\"return confirm('Êtes-vous sûre de supprimer ce contact?')\"
+														 >Supprimer</button></a></td>";
                             echo "</tr>";
                         }
                         ?>

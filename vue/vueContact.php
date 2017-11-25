@@ -32,6 +32,9 @@
 								</tr>
 							</thead>
 							<tbody>
+
+
+
 								<?php
 	                            foreach ($lesTelephones as $t) {
 	                                echo "<tr>";
@@ -39,9 +42,16 @@
 	                                    echo "<td>".$t->getNumeroT()."</td>";
 	                                    echo "<td>".$t->getTypeT()."</td>";
 	                                    echo "<td><a id='supprimer' href='index.php?page=contact&id=".$_GET['id']."&idT=".$t->getIdT()."' /><button type='submit' name='supprimer' class='btn btn-danger'>Supprimer</button></a></td>";
+
+
 	                                echo "</tr>";
 	                            }
 	                            ?>
+
+
+
+
+
 							</tbody>
 						</table>
 					</div>
@@ -94,12 +104,29 @@
 									<textarea class="form-control input-lg" name="message" placeholder="Commentaire" rows="3"><?php echo $leContact->getCommentaireC(); ?></textarea>
 								</div>
 							</div>
-							<div class="col-md-12">
+							<div class="col-md-6">
 								<div class="form-group">
 									<input class="btn btn-primary btn-lg" name="updater" type="submit" value="Modifier">
+
 								</div>
+
+
 							</div>
+
+
+
+
 						</form>
+						<div class="col-md-6">
+
+						<?php echo"<a id='supprimer' href='index.php?page=contact&delete=".$leContact->getIdC()."'/><button type='submit' name='supprimer' class='btn btn-primary btn-lg'
+								 onclick=\"return confirm('Êtes-vous sûre de supprimer ce contact?')\"
+								 >Supprimer</button></a>";
+						?>
+
+
+
+						</div>
 					</div>
 				</div>
 			</div>

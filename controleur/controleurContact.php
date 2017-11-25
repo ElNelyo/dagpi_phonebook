@@ -6,6 +6,14 @@ require_once 'modele/dao/telephoneDAO.php';
 $unContactDAO = new ContactDAO();
 $unTelephoneDAO = new TelephoneDAO();
 
+
+if (isset($_GET['delete'])) {
+	$unContactDAO->deleteContact($unContactDAO->getContactById($_GET['delete']));
+	header('Location: index.php?page=accueil');
+}
+
+
+
 if (isset($_GET['id'])) {
 	$leContact = $unContactDAO->getContactById($_GET['id']);
     $lesTelephones = $unTelephoneDAO->getTelephoneByIdContact($_GET['id']);
