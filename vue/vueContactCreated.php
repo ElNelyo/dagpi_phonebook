@@ -4,7 +4,7 @@
 			<div class="fh5co-hero-wrap">
 				<div class="fh5co-hero-intro">
 					<h1 class="to-animate hero-animate-1">
-						Le contact <b><?php echo ($leContact->getNomC()." - ".$leContact->getPrenomC())?></b> a bien été créer.
+						Le contact <b><?php echo ($leContact->getNomC()." - ".$leContact->getPrenomC())?></b> a bien été créé.
 					</h1>
 					<h2 class="to-animate hero-animate-2">
 						<?php echo '<a href="index.php?page=createPhone&id='.$leContact->getIdC().'">Rajouter des téléphones au contact</a>'?>
