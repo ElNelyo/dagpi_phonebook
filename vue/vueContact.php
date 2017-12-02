@@ -61,6 +61,17 @@
 						<?php echo '<a href="index.php?page=createPhone&id='.$_GET['id'].'">Ajouter un téléphone</a>' ?>
 					</div>
 				</div>
+			</br>
+				<div class="alert alert-danger" role="alert">
+					<span class="glyphicon glyphicon-send" aria-hidden="true"> </span>
+					<span class="sr-only"> Export:</span>
+					 Format VCard
+				</div>
+
+
+
+
+
 			</div>
 			<div class="col-md-7 col-sm-6 text-center fh5co-feature feature-box">
 				<div class="fh5co-feature-icon">
@@ -69,6 +80,9 @@
 				<div class="row">
 					<div class="col-md-12 animate-box">
 						<h2 class="fh5co-uppercase-heading-sm text-center">Informations</h2>
+
+
+
 						<div class="fh5co-spacer fh5co-spacer-sm"></div>
 					</div>
 					<div class="col-md-8 col-md-offset-2 animate-box">
@@ -111,8 +125,12 @@
 								</div>
 
 
-							</div>
 
+
+
+
+
+							</div>
 
 
 
