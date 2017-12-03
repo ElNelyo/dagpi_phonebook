@@ -1,3 +1,12 @@
+<?php session_start();
+$_SESSION['NOM'] = $leContact->getNomC();
+$_SESSION['PRENOM'] = $leContact->getPrenomC();
+$_SESSION['NAISSANCE'] = $leContact->getDatenaissanceC();
+$_SESSION['BOITE'] = $leContact->getSocieteC();
+$_SESSION['ADRESSE'] = $leContact->getAdresseC();
+$_SESSION['COMMENTAIRE'] = $leContact->getCommentaireC();
+
+?>
 <div id="fh5co-hero">
 	<a class="smoothscroll fh5co-arrow to-animate hero-animate-4" href="#fh5co-main"><i class="ti-angle-down"></i></a> <!-- End fh5co-arrow -->
 	<div class="container">
@@ -41,6 +50,12 @@
 	                                    echo "<td>".$t->getIndicatifT()."</td>";
 	                                    echo "<td>".$t->getNumeroT()."</td>";
 	                                    echo "<td>".$t->getTypeT()."</td>";
+																		if($t->getTypeT()=="Fixe"){
+																				$_SESSION['FIXE']= $t->getNumeroT();
+																			}
+																			if($t->getTypeT()=="Mobile"){
+																				$_SESSION['MOBILE'] = $t->getNumeroT();
+																		}
 	                                    echo "<td><a id='supprimer' href='index.php?page=contact&id=".$_GET['id']."&idT=".$t->getIdT()."' /><button type='submit' name='supprimer' class='btn btn-danger'>Supprimer</button></a></td>";
 
 
@@ -62,11 +77,13 @@
 					</div>
 				</div>
 			</br>
-				<div class="alert alert-danger" role="alert">
+				<a href="vcardexport/export.php"><div class="alert alert-danger" role="alert">
 					<span class="glyphicon glyphicon-send" aria-hidden="true"> </span>
 					<span class="sr-only"> Export:</span>
 					 Format VCard
 				</div>
+			</a>
+
 
 
 
