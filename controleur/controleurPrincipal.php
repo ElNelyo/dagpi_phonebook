@@ -19,12 +19,14 @@ if (isset($_GET['page'])){
         case 'contact':
             require 'controleur/controleurContact.php';
             break;
-      
+
         default:
             require 'controleur/controleurAccueil.php';
             break;
 
     }
+}else{
+      require 'controleur/controleurAccueil.php';
 }
 
 ?>
