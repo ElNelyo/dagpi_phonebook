@@ -14,6 +14,9 @@
 				<li>
 					<a href="index.php?page=createPhone">Créer un téléphone</a>
 				</li>
+				<li>
+					<a target="blank" href="doc/html">Voir documentation</a>
+				</li>
 			</ul>
 		</nav><!-- </div> -->
 	</div>
