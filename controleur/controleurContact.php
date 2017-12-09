@@ -30,6 +30,11 @@ if(isset($_POST['updater'])){
 	$newContact = new Contact();
 
 
+
+
+
+
+
 	if(isset($_POST['nom']) && !empty($_POST['nom'])){
 		$newContact->setNomC($_POST['nom']);
 	}else{
@@ -73,7 +78,7 @@ if(isset($_POST['updater'])){
 	$unContactDAO->updateContact($leContact, $newContact);
 	header('Location: index.php?page=contact&id='.$_GET['id'].'&update=1');
 
-
+	
 }
 
 
